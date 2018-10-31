@@ -22,7 +22,7 @@ html body header {
   position: absolute;
   background: #B69AFF;
   width: 100vw;
-  height: 2em;
+  height: 2rem;
   z-index: 100;
 }
 
@@ -42,59 +42,56 @@ html body header nav ul {
 /* line 27, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body header nav ul li {
   flex: 0 1 6em;
-  border: 1px solid black;
   padding: 0.4em;
+  border-left: 1px solid #8965FF;
+  border-right: 1px solid #8965FF;
+  border-top: none;
+  border-bottom: none;
   background-color: #D6C5FF;
   text-align: center;
   transition: background-color 0.3s;
-}
-
-/* line 35, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body header nav ul li a {
-  text-decoration: none;
+  cursor: pointer;
 }
 
 /* line 39, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body header nav ul li a:link {
-  color: #1F7121;
+html body header nav ul li a {
+  text-decoration: none;
   transition: all 0.3s;
 }
 
-/* line 43, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body header nav ul li a:visited {
-  color: #1F7121;
-  transition: all 0.3s;
-}
-
-/* line 47, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body header nav ul li a:hover {
+/* line 44, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+html body header nav ul li a.hover {
   color: #A5FFBC;
   text-shadow: 0 0 0.2em black;
   transition: all 0.3s;
 }
 
-/* line 52, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body header nav ul li a:active {
-  color: #A5FFBC;
-  text-shadow: 0 0 0.2em black;
-  transition: all 0.3s;
-}
-
-/* line 59, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 51, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body header nav ul li:hover {
   background-color: #E1E0FF;
   transition: background-color 0.3s;
 }
 
-/* line 66, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 55, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+html body header nav ul li:first-child {
+  border-left: 1px solid #8965FF;
+  border-right: none;
+}
+
+/* line 60, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+html body header nav ul li:last-child {
+  border-right: 1px solid #8965FF;
+  border-left: none;
+}
+
+/* line 68, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* TYPOGRAPHY */
 }
 
-/* line 72, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 74, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section {
   overflow: hidden;
   flex: 1;
@@ -110,13 +107,19 @@ html body .main-wrapper main section {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* line 84, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 85, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section a {
   font-weight: 700;
   color: white;
+  transition: all 0.3s;
 }
 
-/* line 89, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 91, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+html body .main-wrapper main section a:hover {
+  text-shadow: -0.1em -0.1em 0.1em #432D3B;
+}
+
+/* line 95, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section #imgPag1, html body .main-wrapper main section #imgPag2, html body .main-wrapper main section #imgPag3 {
   position: absolute;
   top: 0;
@@ -128,29 +131,29 @@ html body .main-wrapper main section #imgPag1, html body .main-wrapper main sect
   z-index: -1;
 }
 
-/* line 99, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 105, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section #imgPag1 {
   background-image: url("../img/blank-brown-cafe-459562.jpg");
 }
 
-/* line 102, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 108, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section #imgPag2 {
   background-image: url("../img/ai-codes-coding-247791.jpg");
 }
 
-/* line 105, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 111, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section .container {
   padding: 2rem;
 }
 
-/* line 108, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 114, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper main section .container h1 {
   text-align: center;
   font-weight: 900;
   font-size: 2rem;
 }
 
-/* line 118, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 123, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer {
   text-align: center;
   overflow: hidden;
@@ -165,14 +168,14 @@ html body .main-wrapper footer {
   margin: auto;
 }
 
-/* line 131, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 136, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer .container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
 }
 
-/* line 137, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 142, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer a {
   flex: 0 0 auto;
   width: 64px;
@@ -185,56 +188,51 @@ html body .main-wrapper footer a {
   color: white;
 }
 
-/* line 150, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 154, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconLinkedin, html body .main-wrapper footer #iconGithub, html body .main-wrapper footer #iconMail, html body .main-wrapper footer #iconSkype {
   background-image: url("../img/sprites/social.png");
   background-size: 256px;
   transition: all 0.3s;
 }
 
-/* line 156, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 160, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconLinkedin:link, html body .main-wrapper footer #iconLinkedin:visited {
   background-position: -128px -64px;
 }
 
-/* line 160, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 164, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconLinkedin:hover, html body .main-wrapper footer #iconLinkedin:active {
-  background-position: -128px 0px;
+  background-position: -128px 0;
 }
 
-/* line 164, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 168, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconSkype:link, html body .main-wrapper footer #iconSkype:visited {
   background-position: -64px -64px;
 }
 
-/* line 168, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body .main-wrapper footer #iconSkype:hover, html body .main-wrapper footer #iconSkype:active {
-  background-position: -64px 0px;
-}
-
 /* line 172, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body .main-wrapper footer #iconGithub:link, html body .main-wrapper footer #iconGithub:visited {
-  background-position: 0px -64px;
+html body .main-wrapper footer #iconSkype:hover, html body .main-wrapper footer #iconSkype:active {
+  background-position: -64px 0;
 }
 
 /* line 176, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body .main-wrapper footer #iconGithub:hover, html body .main-wrapper footer #iconGithub:active {
-  background-position: 0px 0px;
+html body .main-wrapper footer #iconGithub:link, html body .main-wrapper footer #iconGithub:visited {
+  background-position: 0 -64px;
 }
 
 /* line 180, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+html body .main-wrapper footer #iconGithub:hover, html body .main-wrapper footer #iconGithub:active {
+  background-position: 0 0;
+}
+
+/* line 184, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconMail:link, html body .main-wrapper footer #iconMail:visited {
   background-position: -192px -64px;
 }
 
-/* line 184, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
+/* line 188, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
 html body .main-wrapper footer #iconMail:hover, html body .main-wrapper footer #iconMail:active {
-  background-position: -192px 0px;
-}
-
-/* line 191, E:/Users/Raúl/Documents/Geekshubs bootcamp/Ejercicios/personal-page-prebootcamp-Rauldel2/sass/estilos.scss */
-html body .main-wrapper p {
-  /* line-height: 1.5; */
+  background-position: -192px 0;
 }
 
 /*# sourceMappingURL=../css/estilos.map */
