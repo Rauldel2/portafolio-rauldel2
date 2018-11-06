@@ -5,6 +5,9 @@ $(document).ready(function () {
         menu: '#menu'
     });
 
+    let conocIcons = $(".conocIcons");
+    let idOscurecer = $("#oscurecer");
+
     /**
      * Evento que añade la clase hover a un elemento de menú al pasar el ratón por encima del padre de dicho elemento
      */
@@ -13,15 +16,40 @@ $(document).ready(function () {
         linkItem.toggleClass("hover");
     })
 
+    /**
+     * Evento de click en conocimientos
+     */
+    conocIcons.on('click', function (ev) {
+        idOscurecer.addClass('oscurecer');
+        $(this).after('<div class="popup"></div>');
+        let popup = $(".popup");
+        let etiqueta = $(this).html();
+        popup.css({"top": ev.pageY, "left": ev.pageX, "width": "20vw"});
+        if (etiqueta.toUpperCase() === "JS") popup.html("<p>Ola ke ase</p>");
+        setTimeout(function () {
+            popup.css({"top": "10vh", "left": "20vw", "width": "60vw"});
+        }, 200);
+
+
+        $('.oscurecer').on('click', function () {
+
+            if(popup != 'undefined') popup.remove();
+
+            idOscurecer.removeClass('oscurecer');
+        })
+    })
+
+    /**
+     * Evento de enlace directo a ancla
+     */
     $('[data-menuanchor]').on('click', irAAncla);
 
 })
 
 /**
  * Función que recoge un evento de click en un li de menú y redirecciona con el href que contiene el elemento a hijo
- * @param evento
  */
-function irAAncla(evento) {
-    var aaa = $(this);
-    window.location.replace(aaa.children().attr("href"));
+function irAAncla() {
+    var linkContainer = $(this);
+    window.location.replace(linkContainer.children().attr("href"));
 }
