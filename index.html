@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/normalize.css">
-  <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">-->
   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
   <link rel="stylesheet" href="vendors/pagePiling.js/dist/jquery.pagepiling.min.css">
   <link rel="stylesheet" href="css/estilos.css">
@@ -25,70 +24,69 @@
   </header>
   <div class="main-wrapper">
     <main id="pagepiling">
-      <section class="section" data-anchor="pag1">
+      <section class="section" data-anchor="pag1" id="pag1">
         <div class="container">
 
           <h1>
-            Raúl De la Paz Navarro - Programador web.
+            Raúl De la Paz Navarro - Programador web
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores ea fugit hic id laborum, maiores
-            officiis quasi suscipit voluptas? Ab culpa dolor et laudantium porro, sint sit soluta tempora!
+            Soy un entusiasta de la programación, recientemente graduado en el ciclo superior de Desarrollo de
+            Aplicaciones Web <em>(DAW)</em>. Mis conocimientos abarcan diversos lenguajes de programación como Java,
+            Javascript o PHP, además de contar también con algo de experiencia en hardware, reparación de PCs,
+            periféricos y redes. También me manejo bien con herramientas de diseño gráfico como Photoshop o Gimp.
           </p>
           <h3>
-            <a href="mailto:jupegarnica@gmail.com">Let's talk</a>
+            <a href="mailto:rauldelapaznavarro@gmail.com">Contáctame</a>
           </h3>
           <div id="imgPag1"></div>
         </div>
       </section>
-      <section class="section" data-anchor="pag2">
+      <section class="section" data-anchor="pag2" id="pag2">
         <div class="container">
           <h1>
             Conocimientos
           </h1>
           <p class="containerComp">
-            <span class="conocIcons" id="html5">HTML5</span>
-            <span class="conocIcons" id="css">CSS3</span>
+            <span class="conocIcons" id="html5">HTML</span>
+            <span class="conocIcons" id="css">CSS</span>
             <span class="conocIcons" id="js">JS</span>
             <span class="conocIcons" id="php">PHP</span>
             <span class="conocIcons" id="mysql">MySQL</span>
-            <span class="conocIcons" id="jquery">JQuery</span>
+            <span class="conocIcons" id="java">Java</span>
           </p>
-          <!--<p>-->
-            <!--<span class="compIcons"></span>-->
-            <!--<span class="compIcons"></span>-->
-            <!--<span class="compIcons"></span>-->
-            <!--<span class="compIcons"></span>-->
-            <!--<span class="compIcons"></span>-->
-            <!--<span class="compIcons"></span>-->
-          <!--</p>-->
           <div id="imgPag2"></div>
           <div id="oscurecer"></div>
         </div>
       </section>
 
-      <section class="section" data-anchor="pag3">
+      <section class="section" data-anchor="pag3" id="pag3">
         <div class="container">
           <div id="imgPag3"></div>
-          <h1>
-            consectetur adipisicing elit. Iusto, quis?.
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores ea fugit hic id laborum, maiores
-            officiis quasi suscipit voluptas? Ab culpa dolor et laudantium porro, sint sit soluta tempora!
-          </p>
-          <h3>
-            <a href="mailto:jupegarnica@gmail.com">Let's talk</a>
-          </h3>
+          <article>
+            <h1>
+              Contacto
+            </h1>
+            <p>
+              Puedes contactarme por E-Mail, bien mediante el icono situado en la parte inferior de la pantalla, o bien
+              rellenando el siguiente formulario.
+            </p>
+          </article>
+          <br>
+          <div id="formulario">
+            <input type="text" id="mailAsunto" placeholder="Asunto">
+            <textarea name="mailMensaje" id="mailMensaje" placeholder="Tu mensaje" cols="30" rows="10"></textarea>
+            <button id="mailEnviar">Enviar</button>
+          </div>
 
         </div>
       </section>
     </main>
     <footer>
       <div class="container">
-        <a id="iconLinkedin" href="#"><span>LinkedIn</span></a>
+        <a id="iconLinkedin" href="https://www.linkedin.com/in/ra%C3%BAl-de-la-paz-navarro-b013999b" target="_blank"><span>LinkedIn</span></a>
         <a id="iconSkype" href="skype:rauldel2"><span>Skype</span></a>
-        <a id="iconGithub" href="https://github.com/Rauldel2"><span>Github</span></a>
+        <a id="iconGithub" href="https://github.com/Rauldel2" target="_blank"><span>Github</span></a>
         <a id="iconMail" href="mailto:rauldelapaznavarro@gmail.com"><span>Mail</span></a>
     
       </div>
@@ -96,6 +94,7 @@
   </div>
   <script src="vendors/jquery/dist/jquery.min.js"></script>
   <script src="vendors/pagePiling.js/dist/jquery.pagepiling.min.js"></script>
+  <script src="js/textos.js"></script>
   <script src="js/main.js"></script>
 </body>
 
