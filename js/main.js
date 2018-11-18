@@ -1,8 +1,8 @@
 $(document).ready(function () {
     // Plugin PagePiling
     $("#pagepiling").pagepiling({
-        anchors: ['pag1', 'pag2', 'pag3'],
-        menu: '#menu'
+        anchors: ['pag1', 'pag2', 'pag3'],//        Las anclas
+        menu: '#menu'//                             El elemento contenedor de las anclas
     });
 
     let conocIcons = $(".conocIcons");
@@ -15,17 +15,17 @@ $(document).ready(function () {
     $('[data-menuanchor]').hover(function (evento) {
         let linkItem = $(this).find('a');
         linkItem.toggleClass("hover");
-    })
+    });
 
     /**
      * Evento de click en conocimientos
      */
     conocIcons.on('click', function (ev) {
-        idOscurecer.addClass('oscurecer');
-        $(this).after('<div class="popup"></div>');
-        let popup = $(".popup");
-        let etiqueta = $(this).html();
-        popup.css({"top": ev.pageY, "left": ev.pageX, "width": "20vw"});
+        idOscurecer.addClass('oscurecer');//                Propiedad para oscurecer la pantalla mediante un div
+        $(this).after('<div class="popup"></div>');//       Inserción de popup
+        let popup = $(".popup");//                          Captura de popup
+        let etiqueta = $(this).html();//                    Captura del html (el texto) del elemento clickado
+        popup.css({"top": ev.pageY, "left": ev.pageX, "width": "20vw"});//      Coordenadas iniciales del popup
 
         if (etiqueta.toUpperCase() === "JS") popup.html("<p>" + textos.conocimJs + "</p>");
         if (etiqueta.toUpperCase() === "HTML") popup.html("<p>" + textos.conocimHtml + "</p>");
@@ -35,15 +35,15 @@ $(document).ready(function () {
         if (etiqueta.toUpperCase() === "JAVA") popup.html("<p>" + textos.conocimJava + "</p>");
 
         setTimeout(function () {
-            popup.css({"top": "10vh", "left": "25vw", "width": "45vw"});
-        }, 200);
+            popup.css({"top": "10vh", "left": "25vw", "width": "45vw"});//      Coordenadas finales del popup.
+        }, 200);//                                                              El timeout es para que haga la animación
 
 
-        $('.oscurecer').on('click', function () {
+        $('.oscurecer').on('click', function () {//         Evento de click en la parte oscurecida de la pantalla
 
-            if(popup != 'undefined') popup.remove();
+            if(popup != 'undefined') popup.remove();//      Destruye el popup si lo encuentra
 
-            idOscurecer.removeClass('oscurecer');
+            idOscurecer.removeClass('oscurecer');//         El div que oscurece deja de hacerlo
         })
     });
 
@@ -52,9 +52,9 @@ $(document).ready(function () {
     /**
      * Evento de enlace directo a ancla
      */
-    $('[data-menuanchor]').on('click', irAAncla);
+    $('[data-menuanchor]').on('click', irAAncla);//     data-menuanchor son los li que contienen los enlaces
 
-})
+});
 
 /**
  * Función que recoge un evento de click en un li de menú y redirecciona con el href que contiene el elemento a hijo

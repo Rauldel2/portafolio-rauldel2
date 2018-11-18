@@ -1,0 +1,20 @@
+{
+  "name": "Portafolio de Raul De la Paz",
+  "homepage": "https://github.com/GeeksHubsAcademy/personal-page-prebootcamp-Rauldel2",
+  "authors": [
+    "Raul de la Paz <rauldelapaznavarro@gmail.com>"
+  ],
+  "description": "Portafolio",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

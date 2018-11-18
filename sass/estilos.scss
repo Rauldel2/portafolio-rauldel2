@@ -1,0 +1,462 @@
+
+$conocIconSize : calc(39px + 3vw);//  Tamaño de 'iconos' en la pestaña conocimientos
+$fontSizeDefault: calc(13px + 1vw);// Tamaño de fuente, por defecto
+$socialIconSize: 64px;//              Tamaño de los iconos sociales, en el footer
+$socialSpriteSize: 256px;//           Tamaño del sprite de iconos sociales
+$fontFamily: 'Exo', sans-serif;//     Fuente utilizada en la página
+$fontSizePopup: 0.6em;//              Tamaño de fuente de los popups
+
+$imgPag1: url("../img/blank-brown-cafe-459562.jpg");//    Imagen de fondo de la página 1
+$imgPag2: url("../img/ai-codes-coding-247791.jpg");//     Imagen de fondo de la página 2
+$imgPag3: url("../img/pexels-photo-97076.jpeg");//        Imagen de fondo de la página 3
+$imgSpriteSocial: url("../img/sprites/social.png");//     Sprite de iconos sociales
+
+*{
+  margin:0;
+  padding:0;
+}
+
+// CLASE OSCURECER
+.oscurecer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 20;
+  transition: opacity 0.5s;
+}
+
+//CLASE POPUP
+.popup{
+  position: absolute;
+  z-index: 21;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: black;
+  font-weight: 600;
+  font-size: $fontSizePopup;
+  transition: all 0.5s;
+}
+
+html {
+  font-family: $fontFamily;
+  font-size: $fontSizeDefault;
+  body {
+    color:white;
+
+    header {
+      position: absolute;
+      background: #B69AFF;
+      width: 100vw;
+      height: 2rem;
+      z-index: 100;
+      nav{
+        position: relative;
+        ul{
+          list-style: none;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          li{
+            flex: 0 1 6em;
+            padding: 0.4em;
+            border-left: 1px solid #8965FF;
+            border-right: 1px solid #8965FF;
+            border-top: none;
+            border-bottom: none;
+            background-color: #D6C5FF;
+            text-align: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+
+            a{
+              text-decoration: none;
+              transition: all 0.3s;
+            }
+
+            a:link, a:visited{
+              color: #432d3b;
+            }
+
+            a.hover{
+              color: #A5FFBC;
+              text-shadow: 0 0 0.2em black;
+              transition: all 0.3s;
+            }
+          }
+
+          li:hover{
+            background-color: #E1E0FF;
+            transition: background-color 0.3s;
+          }
+          li:first-child{
+            border-left: 1px solid #8965FF;
+            border-right: none;
+          }
+
+          li:last-child{
+            border-right: 1px solid #8965FF;
+            border-left: none;
+          }
+        }
+      }
+    }
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      main {
+
+        section {
+          overflow:hidden;
+          flex:1;
+          background: #000000;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to top, rgba(175,154,193,1), rgba(67,45,59,1));  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to top, rgba(175,154,193,1), rgba(67,45,59,1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+          a {
+            font-weight: 700;
+            color: white;
+            transition: all 0.3s;
+          }
+
+          a:hover{
+            text-shadow: -0.1em -0.1em 0.1em #432D3B;
+          }
+
+          #imgPag1, #imgPag2, #imgPag3{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: cover;
+            opacity: 0.2;
+            z-index: -1;
+          }
+          #imgPag1{
+            background-image: $imgPag1;
+          }
+          #imgPag2{
+            background-image: $imgPag2;
+          }
+          #imgPag3{
+            background-image: $imgPag3;
+          }
+          .container {
+            padding: 2rem;
+
+            h1 {
+              text-align: center;
+              font-weight: 900;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      footer {
+        text-align: center;
+        overflow:hidden;
+        flex:initial;
+        background: #b4d0c2;
+        color: #432d3b;
+        box-shadow: 0 -8px 16px #432d3b;
+        z-index: 100;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        .container {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+        }
+
+        a {
+          flex: 0 0 auto;
+          width: $socialIconSize;
+          height: $socialIconSize;
+          font-weight: 700;
+          font-size: 0.8rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 0.05rem;
+          color: white;
+          span{
+            display: none;
+          }
+        }
+
+        #iconLinkedin, #iconGithub, #iconMail, #iconSkype{
+          background-image: $imgSpriteSocial;
+          background-size: $socialSpriteSize;
+          transition: background-position 0.3s, background-color 0.6s;
+        }
+
+        #iconLinkedin:link, #iconLinkedin:visited{
+          background-position: -128px -64px;
+        }
+
+        #iconLinkedin:hover, #iconLinkedin:active{
+          background-position: -128px 0;
+        }
+
+        #iconSkype:link, #iconSkype:visited{
+          background-position: -64px -64px;
+        }
+
+        #iconSkype:hover, #iconSkype:active{
+          background-position: -64px 0;
+        }
+
+        #iconGithub:link, #iconGithub:visited{
+          background-position: 0 -64px;
+        }
+
+        #iconGithub:hover, #iconGithub:active{
+          background-position: 0 0;
+        }
+
+        #iconMail:link, #iconMail:visited{
+          background-position: -192px -64px;
+        }
+
+        #iconMail:hover, #iconMail:active{
+          background-position: -192px 0;
+        }
+      }
+    }
+  }
+}
+// ICONOS CONOCIMIENTOS
+
+.containerComp{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.conocIcons{
+  flex: 0 1 auto;
+  padding: 0.8rem;
+  width: $conocIconSize;
+  height: $conocIconSize;
+  text-align: center;
+  line-height: 2.9rem;
+  border-radius: 50%;
+  text-shadow: 0 0 0.2em black, 0.2em 0.2em 0.3em black;
+  overflow: hidden;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+#html5{
+  background-color: dodgerblue;
+}
+#css{
+  background-color: greenyellow;
+}
+#js{
+  background-color: yellow;
+}
+#php{
+  background-color: mediumpurple;
+}
+#mysql{
+  background-color: orange;
+}
+#java{
+  background-color: #7287A8;
+}
+
+// CONTACTO
+
+input[type=text], textarea{
+  display: block;
+  width: 20rem;
+  margin: 0 auto;
+  padding: 0.2rem;
+  font-size: 0.6em;
+}
+
+input[type=text]{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+textarea{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  resize: none;
+}
+
+button#mailEnviar{
+  display: block;
+  margin: 0 auto;
+  padding: 0.2rem;
+  font-size: 0.8em;
+}
+
+// MEDIA QUERIES
+
+@media all and (max-height: 650px) {
+  #pag3{
+    .container{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+
+    }
+  }
+  article, #formulario{
+    flex: 0 1 45vw;
+  }
+  #formulario{
+    input, textarea{
+      width: 40vw;
+    }
+  }
+}
+
+@media all and (max-width: 264px){
+  #pag3{
+    .container{
+      padding: 0;
+      #formulario{
+        input, textarea{
+          width: 100vw;
+        }
+      }
+    }
+  }
+  html{
+    body{
+      font-size: calc(10px + 1vw);
+      .main-wrapper{
+        footer {
+          text-align: center;
+          background: #b4d0c2;
+          box-shadow: 0 -8px 16px #432d3b;
+          z-index: 100;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+
+          .container {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+          }
+
+          a {
+            flex: 0 0 auto;
+            width: 100vw;
+            height: 1.4em;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            color: #432d3b;
+            padding: 0.2rem;
+            border-bottom: 1px solid #432D3B;
+            span{
+              display: inline;
+            }
+          }
+          a:last-child{
+            border: none;
+          }
+
+          a:hover{
+            background-color: #86D09D;
+            transition: background-color 0.3s;
+          }
+
+          #iconLinkedin, #iconGithub, #iconMail, #iconSkype{
+            background-image: none;
+            background-size: 256px;
+          }
+
+          #iconLinkedin:link, #iconLinkedin:visited{
+            background-position: -128px -64px;
+          }
+
+          #iconLinkedin:hover, #iconLinkedin:active{
+            background-position: -128px 0;
+          }
+
+          #iconSkype:link, #iconSkype:visited{
+            background-position: -64px -64px;
+          }
+
+          #iconSkype:hover, #iconSkype:active{
+            background-position: -64px 0;
+          }
+
+          #iconGithub:link, #iconGithub:visited{
+            background-position: 0 -64px;
+          }
+
+          #iconGithub:hover, #iconGithub:active{
+            background-position: 0 0;
+          }
+
+          #iconMail:link, #iconMail:visited{
+            background-position: -192px -64px;
+          }
+
+          #iconMail:hover, #iconMail:active{
+            background-position: -192px 0;
+          }
+        }
+      }
+    }
+  }
+  html {
+    body {
+      header {
+        nav {
+          ul {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            li {
+              flex: 0 1 auto;
+              border-bottom: 1px solid #432D3B;
+            }
+            li:last-child{
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 264px) and (max-height: 650px){
+  h1{
+    font-size: calc(13px + 1vw) !important;
+  }
+  #pag3{
+    .container{
+      display: block;
+    }
+  }
+  article, #formulario{
+    display: block;
+  }
+  #formulario{
+    input, textarea{
+      width: 100vw;
+    }
+  }
+}
