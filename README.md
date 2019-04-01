@@ -1,30 +1,31 @@
-# Actividad_pagina_personal
+# Página personal
 
-Crea tu propia página personal.
+Se trata de un proyecto de página personal mía, de tipo *single page*, para cuya realización se ha utilizado Javascript (JQuery), el plugin [PagePiling](https://alvarotrigo.com/pagePiling/) de Álvaro Trigo, y CSS precompilado (SASS).
 
-Tener una página personal es imprescindible para generar marca personal. 
+Se compone de las siguientes secciones.
 
-## Objetivos
+### Info
 
-Utiliza tus conocimientos de HTML, CSS y GIT para **crear** tu página personal y **publicarla** en Github. 
+Consta de una pequeña descripción sobre mí a modo de resúmen, y un hipervínculo a la sección de contacto (menú aparte)
 
-- Generar marca personal
-- Tener un portfolio online que demuestre tus habilidades
-- Ver tus habilidades para solventar los problemas intrinsecos del desarrollo web
-- Mostrar creatividad a la hora de venderte a ti mismo
+### Conocimientos
 
-## Retos
+Sección en la que muestro las tecnologías y lenguajes de programación conocidos. El usuario ha de clicar en cada círculo, los cuales representan en su mayor parte lenguajes de programación, para abrir una descripción más detallada. Una vez abierta la descripción, haciendo click fuera de ella desaparece.
 
-- **INITIAL COMMIT** Creación del *boilerplate* de HTML y CSS sobre el que construiremos nuestra web. Puedes utilizar éste de código que  es muy usuado y está testeado por millones de usuarios: [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate).  Además incluye normalize.css que una base de css que resetea los estilos por defecto que aplican los navegadores.
-- **LAYOUT CREATION** Crea la estructura de la página con CSS.  Por ejemplo:  Header + section + footer o Section + sidebar .
-- **CONTENT CREATION** Añade el contenido a tu página como texto, titulares (headlines), imagenes y/o backgrounds. Tu decides!
-- **STYLE CREATION** Genera tu propio estilo! no olvides inspirarte buscando otra web de desarrolladores.
-- **PUBLISH** Puedes publicar tu web estática gratuitamente con Github Pages.  Puedes aprender como se hace [aquí](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
+Los textos de las descripciones detalladas están almacenados en el archivo textos.js. Para modificarlos sólo hay que modificar ese archivo.
 
-## Inpiración
+### Contacto
 
-Este repositorio es una web personal que desarrollamos en clase. Os puede servir como inspiración o como punto de partida. El resultado [aquí](https://geekshubsacademy.github.io/Actividad-pagina-personal/)
+Un pequeño formulario de contacto que, tras rellenarlo y hacer click en el botón enviar, mediante Javascript abre el cliente de correo electrónico predeterminado del usuario con el asunto y el mensaje especificados.
 
-Un ejemplo más cuidado es mi propia web personal: [http://jupegarnica.com](http://jupegarnica.com)
+#
+### Secciones comunes
 
+**Barra de menú**: El plugin *PagePiling* ya otorga un modo de pasar de una sección a otra, pero ví adecuado también crear un menú para que la persona que entre en la página sepa qué secciones va a visitar. Es un menú simple, al que sólo se le ha añadido una pequeña funcionalidad mediante Javascript para que al posar el ratón sobre cada elemento del menú desencadene un efecto de *hover* sobre el texto que contiene.
 
+**Footer**: Una lista de redes sociales de las cuales hago uso, y de las cuales sólo se muestra el icono. Para las imagenes he utilizado un *sprite* que contiene todos los iconos, para que se carguen todos desde la primera carga de la página y evitar el ligero parpadeo que puede ocurrir cuando se cargan uno por uno.
+
+#
+### Errores conocidos
+
+- En la versión para móvil, es muy fácil que al hacer click para mostrar la descripción detallada de cada conocimiento, al mismo tiempo se cambie la página. Sospecho que se trata de un problema con el plugin PagePiling, que quizá sea demasiado sensible.
