@@ -2,7 +2,7 @@
 $conocIconSize : calc(39px + 3vw);//  Tamaño de 'iconos' en la pestaña conocimientos
 $fontSizeDefault: calc(13px + 1vw);// Tamaño de fuente, por defecto
 $socialIconSize: 64px;//              Tamaño de los iconos sociales, en el footer
-$socialSpriteSize: 256px;//           Tamaño del sprite de iconos sociales
+$socialSpriteSize: 320px;//           Tamaño del sprite de iconos sociales
 $fontFamily: 'Exo', sans-serif;//     Fuente utilizada en la página
 $fontSizePopup: 0.6em;//              Tamaño de fuente de los popups
 
@@ -194,7 +194,7 @@ html {
           }
         }
 
-        #iconLinkedin, #iconGithub, #iconMail, #iconSkype{
+        #iconLinkedin, #iconGithub, #iconMail, #iconSkype, #iconTwitter{
           background-image: $imgSpriteSocial;
           background-size: $socialSpriteSize;
           transition: background-position 0.3s, background-color 0.6s;
@@ -222,6 +222,14 @@ html {
 
         #iconGithub:hover, #iconGithub:active{
           background-position: 0 0;
+        }
+
+        #iconTwitter:link, #iconTwitter:visited{
+          background-position: -256px -64px;
+        }
+
+        #iconTwitter:hover, #iconTwitter:active{
+          background-position: -256px 0;
         }
 
         #iconMail:link, #iconMail:visited{
@@ -272,6 +280,9 @@ html {
 }
 #java{
   background-color: #7287A8;
+}
+#nodejs{
+  background-color: #75BF54;
 }
 
 // CONTACTO

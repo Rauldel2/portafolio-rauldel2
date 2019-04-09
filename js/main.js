@@ -21,6 +21,7 @@ $(document).ready(function () {
      * Evento de click en conocimientos
      */
     conocIcons.on('click', function (ev) {
+        ev.preventDefault();
         idOscurecer.addClass('oscurecer');//                Propiedad para oscurecer la pantalla mediante un div
         $(this).after('<div class="popup"></div>');//       Inserción de popup
         let popup = $(".popup");//                          Captura de popup
@@ -33,6 +34,7 @@ $(document).ready(function () {
         if (etiqueta.toUpperCase() === "PHP") popup.html("<p>" + textos.conocimPhp + "</p>");
         if (etiqueta.toUpperCase() === "MYSQL") popup.html("<p>" + textos.conocimMysql + "</p>");
         if (etiqueta.toUpperCase() === "JAVA") popup.html("<p>" + textos.conocimJava + "</p>");
+        if (etiqueta.toUpperCase() === "NODEJS") popup.html("<p>" + textos.conocimNodeJs + "</p>");
 
         setTimeout(function () {
             popup.css({"top": "10vh", "left": "25vw", "width": "45vw"});//      Coordenadas finales del popup.

@@ -195,9 +195,9 @@ html body .main-wrapper footer a span {
   display: none;
 }
 
-html body .main-wrapper footer #iconLinkedin, html body .main-wrapper footer #iconGithub, html body .main-wrapper footer #iconMail, html body .main-wrapper footer #iconSkype {
+html body .main-wrapper footer #iconLinkedin, html body .main-wrapper footer #iconGithub, html body .main-wrapper footer #iconMail, html body .main-wrapper footer #iconSkype, html body .main-wrapper footer #iconTwitter {
   background-image: url("../img/sprites/social.png");
-  background-size: 256px;
+  background-size: 320px;
   transition: background-position 0.3s, background-color 0.6s;
 }
 
@@ -223,6 +223,14 @@ html body .main-wrapper footer #iconGithub:link, html body .main-wrapper footer 
 
 html body .main-wrapper footer #iconGithub:hover, html body .main-wrapper footer #iconGithub:active {
   background-position: 0 0;
+}
+
+html body .main-wrapper footer #iconTwitter:link, html body .main-wrapper footer #iconTwitter:visited {
+  background-position: -256px -64px;
+}
+
+html body .main-wrapper footer #iconTwitter:hover, html body .main-wrapper footer #iconTwitter:active {
+  background-position: -256px 0;
 }
 
 html body .main-wrapper footer #iconMail:link, html body .main-wrapper footer #iconMail:visited {
@@ -275,6 +283,10 @@ html body .main-wrapper footer #iconMail:hover, html body .main-wrapper footer #
 
 #java {
   background-color: #7287A8;
+}
+
+#nodejs {
+  background-color: #75BF54;
 }
 
 input[type=text], textarea {
